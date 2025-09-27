@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Souls Of Soulcity</title>
-    <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-            rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-</head>
 
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asphalt Rivals</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="index.html">
+    <meta property="og:title" content="AsphaltRivals">
+    <meta property="og:description" content="In the shadows of Los Santos, the streets become the track and only the bold earn their crown.">
+    <meta property="og:image" content="assets/chotu18.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div id="nav">
-    <img
-            src="sddfs"
-            alt=""
-    />
-    <h4>RANKINGS</h4>
-    <h4>CREWS</h4>
-    <h4>WATCH</h4>
-    <h4>LIVE UPDATES</h4>
-    <h4>AUCTION</h4>
-    <h4>LOGIN</h4>
-</div>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <h2><a href="#home" class="navbrand-link" data-page="home" style="text-decoration: none; color: inherit;"><img src="https://dunb17ur4ymx4.cloudfront.net/webstore/logos/99ed488329527d3bea406ff3ffb4bd28263bb7ff.png"></a></h2>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="#about" class="nav-link" data-page="about">About</a></li>
+            <li class="nav-item"><a href="#rankings" class="nav-link" data-page="rankings">Rankings</a></li>
+            <li class="nav-item"><a href="#groups" class="nav-link" data-page="groups">Groups</a></li>
+            <li class="nav-item"><a href="#qualifiers" class="nav-link" data-page="qualifiers">Qualifiers</a></li>
+            <li class="nav-item"><a href="#watch" class="nav-link" data-page="watch">Watch</a></li>
+            <li class="nav-item"><a href="#live" class="nav-link" data-page="live">Live Updates</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div id="nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="nav-icon2">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="nav-icon4">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
 <div id="cursor"></div>
 <div id="cursor-blur"></div>
 
@@ -33,74 +69,178 @@
         muted
         src="https://cdn.pixabay.com/video/2023/02/09/149878-797491481_large.mp4"
 ></video>
-<div id="main">
-    <div id="page1">
-        <h1>SOULS OF SOULCITY</h1>
-        <h2>Welcome to Soul of Soul City - Where Speed Fuels the Soul!</h2>
-        <div id="arrow">
-            <i class="ri-arrow-down-line"></i>
-        </div>
-    </div>
-    <div id="page2">
-        <div id="scroller">
-                <h4>SOULS OF SOULCITY</h4>
-        </div>
-        <div id="about-us">
-            <img
-                    src="https://drive.google.com/file/d/1LwM78zueyQZOL9Ev4SHmk7YFHu7Rstqw/view?usp=sharing"
-                    alt=""
-            />
-            <div id="about-us-in">
-                <h3>ABOUT US</h3>
-                <p>
-                    Welcome to Souls of Soulcity — where speed rules and passion drives every race. 🏁🔥
 
-                    Hosted by Chotu 18 and powered by the 7th Gear Racing Club, we are a community built on adrenaline, rivalry, and the love for racing. From roaring engines to fierce battles on the streets, this is more than just competition — it’s the heartbeat of the city.
-                </p>
-                <p>
-                    Race hard. Live fast. Leave a legacy.</p>
+<main class="main-content">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div id="main">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div id="page1">
+                        <h1>SOULS OF SOULCITY</h1>
+                        <h2>Welcome to Soul of Soul City - Where Speed Fuels the Soul!</h2>
+                        <div id="arrow">
+                            <i class="ri-arrow-down-line"></i>
+                        </div>
+                    </div>
+                    <div id="page2">
+                        <div id="scroller">
+                            <h4>SOULS OF SOULCITY</h4>
+                        </div>
+                        <div id="about-us">
+                            <img
+                                    src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-1-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+                                    alt=""
+                            />
+                            <div id="about-us-in">
+                                <h3>ABOUT US</h3>
+                                <p>
+                                    Welcome to Souls of Soulcity — where speed rules and passion drives every race. 🏁🔥 Hosted by Chotu 18 and powered by the 7th Gear Racing Club, we are a community built on adrenaline, rivalry, and the love for racing. From roaring engines to fierce battles on the streets, this is more than just competition — it’s the heartbeat of the city.
+                                </p>
 
+                            </div>
+                            <img
+                                    src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-2-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+                                    alt=""
+                            />
+                        </div>
+                    </div>
+                    <div id="page3">
+                        <p>
+                            “On the streets, it’s more than a race - it’s a battle of pride and passion. One city, countless rivals, and only legends cross the finish line.”
+                        </p>
+                        <img
+                                id="colon1"
+                                src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
+                                alt=""
+                        />
+                        <img
+                                id="colon2"
+                                src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
+                                alt=""
+                        />
+                    </div>
+                    <div id="page4">
+                        <h1>WHAT ARE YOU WAITING FOR?</h1>
+                    </div>
+
+                </div>
             </div>
-            <img
-                    src="https://drive.google.com/file/d/1LwM78zueyQZOL9Ev4SHmk7YFHu7Rstqw/view?usp=sharing"
-                    alt=""
-            />
         </div>
+        </div>
+    </section>
 
-    <div id="page3">
-        <p>
-            “On the streets, it’s more than a race - it’s a battle of pride and passion.
-            One city, countless rivals, and only legends cross the finish line.”
-        </p>
-        <img
-                id="colon1"
-                src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg"
-                alt=""
-        />
-        <img
-                id="colon2"
-                src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg"
-                alt=""
-        />
-    </div>
-    <div id="page4">
-        <h1>WHAT ARE YOU WAITING FOR?</h1>
-    </div>
 
-</div>
+    <!-- Watch Page -->
+    <section id="watch" class="page">
+        <div class="container">
+            <h1>Watch</h1>
+            <div class="search-container">
+                <input type="text" id="watch-search" placeholder="Search by title or driver..." class="search-input">
+            </div>
+            <div id="watch-content" class="video-grid">
+                <div class="loading">Loading videos...</div>
+            </div>
+        </div>
+    </section>
 
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
-        integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-></script>
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
-        integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-></script>
+
+    <!-- About Page -->
+    <section id="about" class="page">
+        <div class="container about-tournament">
+            <h1> Grind. Race. Rise. Repeat.</h1>
+            <p class="description">
+                Get ready to burn rubber, chase glory,and carve your name into the streets of the city
+            </p>
+            <div class="cards">
+                <!-- Tournament Format -->
+                <div class="card active">
+                    <!--<h2>Tournament Format</h2>
+                    <p>Asphalt Rivals isn’t just a race — it’s a gauntlet. A brutal test of speed, skill, and endurance that pushes every driver to their limits. From open qualifiers to the final showdown, only the fastest will earn their place among Los Santos’ street legends.</p>
+                    <ul>
+                        <li><span class="blue-dot"></span>Open Qualifiers: 20 racers rise from the chaos.</li>
+                        <li><span class="orange-dot"></span>Group Stage: Only 10 survive the heat to chase glory.</li>
+                        <li><span class="blue-dot"></span>Twists Ahead: Challenges and wildcards keep it unpredictable.</li>
+                    </ul>-->
+                </div>
+
+                <!-- Rules & Regulations -->
+                <div class="card">
+                    <!--<h2>Rules & Regulations</h2>
+                    <p>Asphalt Rivals runs on fairness and respect. Every racer must uphold the code of the streets and follow the rules:</p>
+                    <ul>
+                        <li><span class="orange-dot"></span> Dashcam POV: Footage at 60 FPS or lower required.</li>
+                        <li><span class="blue-dot"></span> Vehicles: Only approved classes and modifications allowed.</li>
+                        <li><span class="orange-dot"></span> Conduct: No curb boosting or exploit abuse.</li>
+                        <li><span class="blue-dot"></span> Management: Officials may update rules anytime.</li>
+                    </ul>-->
+                </div>
+
+                <!-- Prize Pool -->
+                <div class="card">
+                    <!--<h2>Prize Pool</h2>
+                    <p>Here, champions earn more than glory — they claim rewards forged by the streets.</p>-->
+                    <!-- <div class="prizes"> -->
+                    <!--<ul>-->
+                        <!-- <div><span>🥇</span><p>1st Place</p><strong>$50,000</strong></div>
+                        <div><span>🥈</span><p>2nd Place</p><strong>$25,000</strong></div>
+                        <div><span>🥉</span><p>3rd Place</p><strong>$10,000</strong></div>
+                        <li><span class="orange-dot"></span> Champion (#1): A car with a custom livery.</li>
+                        <li><span class="blue-dot"></span>Top 10: Exclusive trophies marking the fastest.</li>
+                        <li><span class="orange-dot"></span> Bonus Prizes: Unique, surprise rewards throughout.</li>
+                    </ul>-->
+                </div>
+
+                <div class="card">
+                    <!--<h2>Credits & Team</h2>
+                    <p>Asphalt Rivals was brought to life by a crew of passionate racers and developers.</p>
+                    <p>Thanks to Shubham, Harshal, and Rawneet for their support and for pushing the project forward.</p>
+                    <p>Special thanks to Soulcity by Echo RP — the backbone that made it possible.</p>-->
+                    <!-- <ul>
+                        <li><span class="orange-dot"></span> Special thanks to Soulcity by Echo RP — the backbone that made it possible.</li>
+                        <li><span class="blue-dot"></span>Thanks to Shubham, Harshal, and Rawneet for their support and for pushing the project forward.</li>
+                    </ul> -->
+                </div>
+
+                <!-- Credits & Team -->
+                <!-- <div class="card">
+                    <h2>Credits & Team</h2>
+                    <p>Asphalt Rivals exists because of a crew of passionate racers and developers who brought this vision to life.</p>
+                    <ul>
+                        <li><span class="orange-dot"></span> A special thanks to Soulcity by Echo RP for making it all possible.</li>
+                        <li><span class="blue-dot"></span> Thanks to Shubham, Harshal, and Rawneet for their support and for pushing the project forward. </li>
+                    </ul>
+                    <ul>
+                        <li>Tournament Director: <strong></strong></li>
+                        <li>Track Designer: <strong></strong></li>
+                        <li>Live Stream: <strong></strong></li>
+                        <li>Web Development: <strong class="link"></strong></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+</main>
+
+
+<script src="Navigation.js"></script>
+<script src="watch.js"></script>
+<script src="about.js"></script>
 <script src="script.js"></script>
 </body>
+
+
 </html>
+
+
+
+
+
+
+
+
+

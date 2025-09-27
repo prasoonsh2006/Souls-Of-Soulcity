@@ -8,7 +8,7 @@ document.addEventListener("mousemove", function (dets) {
     blur.style.top = dets.y - 250 + "px";
 });
 
-var h4all = document.querySelectorAll("#nav h4");
+var h4all = document.querySelectorAll("#nav");
 h4all.forEach(function (elem) {
     elem.addEventListener("mouseenter", function () {
         crsr.style.scale = 3;
@@ -23,18 +23,15 @@ h4all.forEach(function (elem) {
 });
 
 gsap.to("#nav", {
-    backgroundColor: "#000",
+    backgroundColor: "rgba(0,0,0,0.5)", // darker translucent
     duration: 0.5,
-    height: "110px",
     scrollTrigger: {
-        trigger: "#nav",
-        scroller: "body",
-        // markers:true,
-        start: "top -10%",
-        end: "top -11%",
-        scrub: 1,
+        trigger: "#home",
+        start: "bottom top",
+        toggleActions: "play none none reverse",
     },
 });
+
 
 gsap.to("#main", {
     backgroundColor: "#000",
@@ -111,5 +108,57 @@ gsap.from("#page4 h1", {
     },
 });
 
+// Thanks itna aage tak aane ke liye lekin pura code utha ke copy paste karne ki jagah khud ek baar banane ka try karna, kuch naya seekhne ko milega!
 
+
+
+const navItems = document.querySelectorAll("#nav h4");
+const pages = document.querySelectorAll(".page");
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const targetId = item.textContent.toLowerCase(); // lowercase to match section IDs
+        pages.forEach(page => page.classList.remove("active")); // hide all
+        const targetPage = document.getElementById(targetId);
+        if (targetPage) targetPage.classList.add("active"); // show clicked
+    });
+});
+
+
+
+
+// Navbar logo click → go to Home
+const logo = document.querySelector("#nav img");
+const homePage = document.getElementById("home");
+
+logo.addEventListener("click", () => {
+    // Remove active from all pages
+    pages.forEach(page => page.classList.remove("active"));
+
+    // Activate home page
+    homePage.classList.add("active");
+
+    // Scroll to top of home considering navbar height
+    const offset = 130; // navbar height
+    window.scrollTo({
+        top: homePage.offsetTop - offset,
+        behavior: "smooth"
+    });
+});
+
+// GSAP scrollTrigger to change navbar color
+gsap.to("#nav", {
+    backgroundColor: "rgba(255, 255, 255, 0.85)", // semi-transparent white
+    duration: 0.5,
+    scrollTrigger: {
+        trigger: "#home",
+        start: "top top",  // when scrolling begins
+        end: "bottom top", // scroll distance over which it changes
+        scrub: true,       // smooth gradual transition
+    },
+});
+
+
+crsr.style.backgroundColor = "#fff";  // fill color same as border
+crsr.style.opacity = "1";             // ensure fully opaque
 
