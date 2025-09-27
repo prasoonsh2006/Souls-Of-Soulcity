@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="content">
+    <!-- Content that will be updated -->
+    <p>Last updated: <span id="time"></span></p>
+</div>
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand">
@@ -232,10 +236,24 @@
 <script src="watch.js"></script>
 <script src="about.js"></script>
 <script src="script.js"></script>
+<script>
+function refreshContent() {
+    // Example: just updating time
+    const now = new Date();
+    document.getElementById('time').textContent = now.toLocaleTimeString();
+}
+
+// Refresh every 5 seconds
+setInterval(refreshContent, 5000);
+
+// Initial load
+refreshContent();
+</script>
 </body>
 
 
 </html>
+
 
 
 
