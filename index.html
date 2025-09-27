@@ -9,7 +9,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="index.html">
-    <meta property="og:title" content="AsphaltRivals">
+    <meta property="og:title" content="SoulsOfSoulcity">
     <meta property="og:description" content="In the shadows of Los Santos, the streets become the track and only the bold earn their crown.">
     <meta property="og:image" content="assets/chotu18.png">
 
@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="stats">
-  <p>Visitors online: <span id="visitors">0</span></p>
-</div>
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand">
@@ -234,25 +231,11 @@
 <script src="watch.js"></script>
 <script src="about.js"></script>
 <script src="script.js"></script>
-<script>
-function updateStats() {
-  // Simulate fetching new data from server
-  const randomVisitors = Math.floor(Math.random() * 1000);
-  
-  // Update only the number, not the whole div
-  document.getElementById('visitors').textContent = randomVisitors;
-}
-
-// Update every 5 seconds
-setInterval(updateStats, 5000);
-
-// Initial load
-updateStats();
-</script>
 </body>
 
 
 </html>
+
 
 
 
