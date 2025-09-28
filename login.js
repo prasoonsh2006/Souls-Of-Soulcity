@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const CONFIG = {
         sheetId: "1voqzdmNKaFEaDCJEA5Dblqgcf9XQhQAjmZmf-6H6bHY",
-        redirectUrl: "https://soulsofsoulcity.netlify.app/user_page"
+        redirectUrl: "user_page.html"
     };
 
     const loginForm = document.getElementById("loginForm");
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (match) {
                 msgBox.textContent = "✅ Login successful! Redirecting...";
                 localStorage.setItem("loggedInUser", username);
-                window.location.href = CONFIG.redirectUrl;
+                window.location.href = window.location.origin + "/user_page.html";
             } else {
                 msgBox.textContent = "❌ Invalid username or password.";
             }
