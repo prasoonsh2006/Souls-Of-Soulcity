@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const CONFIG = {
         sheetId: "1voqzdmNKaFEaDCJEA5Dblqgcf9XQhQAjmZmf-6H6bHY",
-        redirectUrl: "user_page.html"
+        redirectUrl: "https://soulsofsoulcity.netlify.app/user_page"
     };
 
     const loginForm = document.getElementById("loginForm");
