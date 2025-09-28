@@ -9,10 +9,10 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="index.html">
-    <meta property="og:title" content="SoulsOfSoulcity">
+    <meta property="og:title" content="AsphaltRivals">
     <meta property="og:description" content="In the shadows of Los Santos, the streets become the track and only the bold earn their crown.">
     <meta property="og:image" content="assets/chotu18.png">
-
+    <meta http-equiv="refresh">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,12 +23,12 @@
             <h2><a href="#home" class="navbrand-link" data-page="home" style="text-decoration: none; color: inherit;"><img src="https://dunb17ur4ymx4.cloudfront.net/webstore/logos/99ed488329527d3bea406ff3ffb4bd28263bb7ff.png"></a></h2>
         </div>
         <ul class="nav-menu" id="nav-menu">
-            <li class="nav-item"><a href="#about" class="nav-link" data-page="about">About</a></li>
+            <li class="nav-item"><a href="#crews" class="nav-link" data-page="crews">Crews</a></li>
+            <li class="nav-item"><a href="#schedule" class="nav-link" data-page="schedule">Schedule</a></li>
             <li class="nav-item"><a href="#rankings" class="nav-link" data-page="rankings">Rankings</a></li>
-            <li class="nav-item"><a href="#groups" class="nav-link" data-page="groups">Groups</a></li>
-            <li class="nav-item"><a href="#qualifiers" class="nav-link" data-page="qualifiers">Qualifiers</a></li>
             <li class="nav-item"><a href="#watch" class="nav-link" data-page="watch">Watch</a></li>
-            <li class="nav-item"><a href="#live" class="nav-link" data-page="live">Live Updates</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link" data-page="about">About</a></li>
+            <li class="nav-item"><a href="#login" class="nav-link" data-page="login">Login</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <div id="nav-icon1">
@@ -127,9 +127,17 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
+    <!-- Rankings Page -->
+    <section id="rankings" class="page">
+        <div class="container">
+            <h1>The Leaderboard</h1>
+            <div id="rankings-content" class="trump-cards-container">
+                <div class="loading"><h2>Coming Soon...</h2></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Watch Page -->
     <section id="watch" class="page">
@@ -147,7 +155,7 @@
 
     <!-- About Page -->
     <section id="about" class="page">
-        <div class="container about-tournament">
+        <div class="container about-tournament bg-image">
             <h1> Grind. Race. Rise. Repeat.</h1>
             <p class="description">
                 Get ready to burn rubber, chase glory,and carve your name into the streets of the city
@@ -221,27 +229,73 @@
         </div>
     </section>
 
+    <section id="login" class="page">
+        <div class="wrapper">
+            <!-- Login form -->
+            <div class="form-wrapper sign-in">
+                <form id="loginForm">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="text" id="username" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="loginMessage" style="color:red;"></p>
+                </form>
 
-
-
+            </div>
+        </div>
+    </section>
 </main>
+
 
 
 <script src="Navigation.js"></script>
 <script src="watch.js"></script>
 <script src="about.js"></script>
 <script src="script.js"></script>
+<script src="login.js"></script>
+<script src="rankings.js"></script>
+<script src="cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script>
+    // Function to show a page and scroll to top
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(p => p.classList.remove('active'));
+
+        // Show the selected page
+        const page = document.getElementById(pageId);
+        page.classList.add('active');
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+
+    // Example: if you have nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = link.getAttribute('href').substring(1); // remove #
+            showPage(target);
+        });
+    });
+
+    // Optional: ensure page is at top on load
+    window.onload = function() {
+        window.scrollTo(0, 0);
+    };
+</script>
+
 </body>
 
 
 </html>
-
-
-
-
-
-
-
 
 
 
